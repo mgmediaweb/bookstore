@@ -1,0 +1,103 @@
+@import "../../config";
+
+h2 {
+  color: $color-secondary;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.35rem;
+  margin: $padding/2 0 !important;
+  padding: 0;
+}
+
+h3 {
+  font-size: 0.85rem;
+  color: transparentize($color-secondary, 0.66);
+}
+
+.card {
+  align-items: center;
+  background-color: white;
+  border: solid 1px $color-border;
+  border-radius: $padding/2;
+  box-sizing: border-box;
+  display: flex;
+  height: auto;
+  margin-bottom: $padding*1.5;
+  padding: $padding*2;
+}
+
+.editBar {
+  list-style-type: none;
+  margin-top: $padding*2;
+
+  li {
+    display: inline-block;
+  }
+}
+
+.link {
+  color: transparentize($color-primary, 0.33);
+  font-family: 'Roboto Slab', serif;
+  margin: 0 !important;
+  padding: 0;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+}
+
+.margin-top {
+  margin-top: $padding;
+}
+
+.sec {
+  &-info {
+    width: 50%;
+  }
+
+  &-graph {
+    display: flex;
+    width: 25%;
+
+    h4 {
+      color: $color-secondary;
+      font-weight: normal;
+      font-size: 2.25rem;
+    }
+
+    p {
+      color: transparentize($color-secondary, 0.5) !important;
+      font-size: 0.9rem;
+    }
+
+    .graphBox {
+      height: 70px;
+      margin-right: $padding * 1.5;
+      width: 70px;
+    }
+  }
+
+  &-update {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.9rem;
+    width: 25%;
+
+    h4 {
+      color: transparentize($color-secondary, 0.5) !important;
+      font-weight: normal;
+      font-size: 0.85rem;
+      margin-bottom: $padding;
+    }
+
+    p {
+      color: $color-secondary;
+      margin-bottom: $padding;
+    }
+  }
+}
+
+.separator {
+  color: transparentize($color-secondary, 0.5);
+  margin: 0 $padding;
+}

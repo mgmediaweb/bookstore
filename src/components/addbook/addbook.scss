@@ -1,0 +1,30 @@
+@import "../../config";
+
+.addbook {
+  margin-top: $padding*5;
+
+  h2 {
+    color: transparentize($color-secondary, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: $padding !important;
+  }
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 3.5fr 2.5fr 1fr;
+  gap: $padding;
+}
+
+.inputForm {
+  border: solid 1px $color-border;
+  border-radius: $padding/2;
+  height: 50px;
+  padding: 0 $padding;
+
+  &::placeholder {
+    color: transparentize($color-secondary, 0.66);
+  }
+}

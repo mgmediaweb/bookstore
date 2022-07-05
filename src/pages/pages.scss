@@ -1,0 +1,30 @@
+@import "../config";
+
+h2 {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+hr {
+  border: 1px solid $color-border;
+  margin: $padding*3 0;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: $padding*2 $padding;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.screen {
+  box-sizing: border-box;
+  color: white;
+  height: calc(100vh - $header-height);
+  width: 100vw;
+}
