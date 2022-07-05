@@ -19,12 +19,12 @@
 }
 
 .inputForm {
-    border: solid 1px $color-border;
-    border-radius: $padding/2;
-    height: 50px;
-    padding: 0 $padding;
+  border: solid 1px $color-border;
+  border-radius: $padding/2;
+  height: 50px;
+  padding: 0 $padding;
 
-    &::placeholder {
-        color: transparentize($color-secondary, 0.66);
-    }
+  &::placeholder {
+    color: transparentize($color-secondary, 0.66);
+  }
 }
