@@ -1,0 +1,84 @@
+@import "../../config";
+
+h1 {
+  font-size: 1.85rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+
+  ul {
+    list-style-type: none;
+    margin-left: $padding*3;
+    //padding: 0;
+  
+    li {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: $padding*0.2;
+      margin: 0 $padding*2;
+  
+      a {
+        color: transparentize($color-secondary,0.5);
+        text-decoration: none;
+        transition: $transition;
+  
+        &:hover {
+          color: transparentize($color-secondary,0.25);
+          transition: $transition;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  color: $color-secondary;
+}
+
+.d-flex {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  background: white;
+  border-bottom: solid 1px $color-border;
+  box-sizing: border-box;
+  height: $header-height;
+  padding: $padding;
+  width: 100%;
+}
+
+.logoLink {
+  color:$color-primary;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: transparentize($color-primary, 0.35);
+    transition: $transition;
+  }
+}
+
+.profile {
+  align-items: center;
+  border: solid 1px $color-border;
+  border-radius: 50%;
+  color: $color-primary;
+  display: flex;
+  height: $header-height/2;
+  justify-content: center;
+  transition: $transition;
+  width: $header-height/2;
+
+  &:hover {
+    background-color: transparentize($color-primary, 0.9);
+    cursor: pointer;
+    transition: $transition;
+  }
+}

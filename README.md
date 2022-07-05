@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magicians
+# Bookstore
 
-> Simulator of calculator with the principals functions.  Deployment on Heroku
+> information comming soon
 
 
 ## Built With
