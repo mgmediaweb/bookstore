@@ -1,26 +1,7 @@
 @import "../../config";
 
-button {
-  background-color: $color-primary;
-  border: none;
-  border-radius: $padding/2;
-  color: white;
-  font-family: 'Roboto Slab', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.1rem;
-  padding: $padding $padding*2;
-  user-select: none;
-  transition: $transition;
-
-  &:hover {
-    background-color: darken($color-primary, 10%);
-    cursor: pointer;
-    transition: $transition;
-  }
-}
-
 h2 {
-  color:$color-secondary;
+  color: $color-secondary;
   font-family: 'Roboto Slab', serif;
   font-size: 1.35rem;
   margin: $padding/2 0 !important;
@@ -29,13 +10,13 @@ h2 {
 
 h3 {
   font-size: 0.85rem;
-  color: transparentize($color-secondary,0.66);
+  color: transparentize($color-secondary, 0.66);
 }
 
 .card {
   align-items: center;
   background-color: white;
-  border: solid 1px $color-border;    
+  border: solid 1px $color-border;
   border-radius: $padding/2;
   box-sizing: border-box;
   display: flex;
@@ -86,7 +67,7 @@ h3 {
     }
 
     p {
-      color: transparentize($color-secondary,0.5) !important;
+      color: transparentize($color-secondary, 0.5) !important;
       font-size: 0.9rem;
     }
 
@@ -96,23 +77,24 @@ h3 {
       width: 70px;
     }
   }
+
   &-update {
     font-family: 'Roboto Slab', serif;
     font-size: 0.9rem;
     width: 25%;
 
     h4 {
-      color: transparentize($color-secondary,0.5) !important;
+      color: transparentize($color-secondary, 0.5) !important;
       font-weight: normal;
       font-size: 0.85rem;
       margin-bottom: $padding;
-    }    
+    }
 
     p {
       color: $color-secondary;
       margin-bottom: $padding;
     }
-  }  
+  }
 }
 
 .separator {

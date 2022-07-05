@@ -5,13 +5,21 @@ h2 {
   margin-bottom: 16px;
 }
 
+hr {
+  border: 1px solid $color-border;
+  margin: $padding*3 0;
+}
+
 .container {
   box-sizing: border-box;
-  height: 100%;
   margin: 0 auto;
   max-width: 1140px;
   padding: $padding*2 $padding;
   width: 100%;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .screen {

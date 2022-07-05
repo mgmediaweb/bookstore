@@ -14,20 +14,20 @@ nav {
     list-style-type: none;
     margin-left: $padding*3;
     //padding: 0;
-  
+
     li {
       display: inline-block;
       font-size: 0.8rem;
       letter-spacing: $padding*0.2;
       margin: 0 $padding*2;
-  
+
       a {
-        color: transparentize($color-secondary,0.5);
+        color: transparentize($color-secondary, 0.5);
         text-decoration: none;
         transition: $transition;
-  
+
         &:hover {
-          color: transparentize($color-secondary,0.25);
+          color: transparentize($color-secondary, 0.25);
           transition: $transition;
         }
       }
@@ -55,7 +55,7 @@ nav {
 }
 
 .logoLink {
-  color:$color-primary;
+  color: $color-primary;
   text-decoration: none;
   transition: $transition;
 

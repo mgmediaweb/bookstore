@@ -1,0 +1,28 @@
+@import "../../config";
+
+button {
+  background-color: $color-primary;
+  border: none;
+  border-radius: $padding/2;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 0.1em;
+  user-select: none;
+  transition: $transition;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+    cursor: pointer;
+    transition: $transition;
+  }
+}
+
+.btn-size-normal {
+  font-size: 0.7rem;
+  padding: $padding $padding*2;
+}
+
+.btn-size-big {
+  font-size: 0.9rem;
+  padding: $padding*1.1 $padding*2.1;
+}

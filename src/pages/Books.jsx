@@ -1,4 +1,5 @@
-import Card from '../components/card/Card';
+import Addbook from '../components/addbook/Addbook';
+import Book from '../components/book/Book';
 import './pages.scss';
 
 const BooksScreen = () => {
@@ -26,7 +27,7 @@ const BooksScreen = () => {
       <div className="container">
         {
           books.map((book) => (
-            <Card
+            <Book
               author={book.author}
               category={book.category}
               chapter={book.chapter}
@@ -36,6 +37,8 @@ const BooksScreen = () => {
             />
           ))
         }
+
+        <Addbook />
       </div>
     </div>
   );

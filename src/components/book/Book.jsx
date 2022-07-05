@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import './card.scss';
+import Button from '../button/Button';
+import './book.scss';
 
-/* { title, percentage } */
-
-const Card = (props) => {
+const Book = (props) => {
   const {
     author, category, chapter, title, percentage,
   } = props;
@@ -42,13 +41,13 @@ const Card = (props) => {
       <div className="sec-update">
         <h4>CURRENT CHAPTER</h4>
         <p>{chapter}</p>
-        <button type="button" className="margin-top">UPDATE PROGRESS</button>
+        <Button label="UPDATE PROGRESS" axn={() => console.log(`${title} btn pressed`)} />
       </div>
     </div>
   );
 };
 
-Card.propTypes = {
+Book.propTypes = {
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   chapter: PropTypes.string.isRequired,
@@ -56,4 +55,4 @@ Card.propTypes = {
   percentage: PropTypes.number.isRequired,
 };
 
-export default Card;
+export default Book;
