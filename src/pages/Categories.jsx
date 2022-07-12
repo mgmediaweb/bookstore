@@ -6,11 +6,6 @@ import './pages.scss';
 const CategoriesScreen = () => {
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.categories.categories);
-  const newstate = useSelector((state) => state);
-
-  // const categories = '...';
-
-  console.log(newstate);
 
   return (
     <div className="screen">
