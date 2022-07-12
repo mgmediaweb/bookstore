@@ -43,6 +43,7 @@ h3 {
 
   &:hover {
     color: $color-primary;
+    cursor: pointer;
     text-decoration: underline;
   }
 }

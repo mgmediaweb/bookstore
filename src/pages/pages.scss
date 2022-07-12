@@ -18,6 +18,13 @@ hr {
   width: 100%;
 }
 
+.fieldEmpty {
+  color: $color-secondary;
+  padding: $padding*6 $padding*2;
+  text-align: center;
+  width: 100%;
+}
+
 .text-center {
   text-align: center;
 }

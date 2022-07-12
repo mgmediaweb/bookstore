@@ -2,19 +2,18 @@
 
 # Bookstore
 
-> information comming soon
+> Website created to list books with categories.
 
 
 ## Built With
 
-- REACT JS
-- JAVASCRIPT ES6
-- SASS
+- REACT JS.
+- JAVASCRIPT ES6.
+- SASS.
 
 ## Live Demo
 
-[Heroku](https://math-lovers.herokuapp.com/)
-[Netlify](https://62c3271b4b5a0b1adb848e63--neon-stroopwafel-99986a.netlify.app/)
+[Heroku](https://mgbookstore.herokuapp.com/)
 
 ### Prerequisites
 

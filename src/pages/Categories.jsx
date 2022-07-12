@@ -1,12 +1,20 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { checking } from '../redux/categories/categories';
 import Button from '../components/button/Button';
 import './pages.scss';
 
-const CategoriesScreen = () => (
-  <div className="screen">
-    <div className="container text-center">
-      <Button label="CHECK STATUS" size="big" axn={() => console.log('check status btn pressed')} />
+const CategoriesScreen = () => {
+  const dispatch = useDispatch();
+  const categories = useSelector((state) => state.categories.categories);
+
+  return (
+    <div className="screen">
+      <div className="container text-center">
+        <div className="fieldEmpty">{categories}</div>
+        <Button label="CHECK STATUS" size="big" axn={() => dispatch(checking('Under construction'))} />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default CategoriesScreen;
