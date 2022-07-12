@@ -1,7 +1,24 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  books: [],
+  books: [
+    {
+      id: 'br6bnAI4ueuoOcRkmd1cP',
+      title: 'The Great Gatsby',
+      author: 'F. Scott Fitzgerald',
+      category: 'Tragedy',
+      chapter: 'Chapter 5',
+      percentage: 37,
+    },
+    {
+      id: 'dVxxLqeVbc0lA4ULXhkOn',
+      title: 'Moby Dick',
+      author: 'Herman Melville',
+      category: 'Adventure fiction',
+      chapter: 'Chapter 3',
+      percentage: 24,
+    },
+  ],
 };
 
 const books = createSlice({
