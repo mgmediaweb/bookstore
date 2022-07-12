@@ -1,12 +1,16 @@
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { deleteBook } from '../../redux/books/books';
 import 'react-circular-progressbar/dist/styles.css';
 import Button from '../button/Button';
 import './book.scss';
 
 const Book = (props) => {
+  const dispatch = useDispatch();
+
   const {
-    author, category, chapter, title, percentage,
+    id, author, category, chapter, title, percentage,
   } = props;
 
   return (
@@ -18,7 +22,17 @@ const Book = (props) => {
         <ul className="editBar">
           <li><a href="/home" className="link">Comments</a></li>
           <li><span className="separator">|</span></li>
-          <li><a href="/home" className="link">Remove</a></li>
+          <li>
+            <div
+              role="button"
+              className="link"
+              onClick={() => dispatch(deleteBook(id))}
+              onKeyUp={() => dispatch(deleteBook(id))}
+              tabIndex={id}
+            >
+              Remove
+            </div>
+          </li>
           <li><span className="separator">|</span></li>
           <li><a href="/home" className="link">Edit</a></li>
         </ul>
@@ -51,8 +65,9 @@ Book.propTypes = {
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   chapter: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Book;
