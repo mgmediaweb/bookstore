@@ -61,12 +61,17 @@ const Book = (props) => {
   );
 };
 
+Book.defaultProps = {
+  chapter: 'Not Specificated',
+  percentage: 0,
+};
+
 Book.propTypes = {
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  chapter: PropTypes.string.isRequired,
+  chapter: PropTypes.string,
   id: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
+  percentage: PropTypes.number,
   title: PropTypes.string.isRequired,
 };
 
