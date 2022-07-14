@@ -33,17 +33,17 @@ export const getBooks = createAsyncThunk(
 
 export const addBooksThunk = createAsyncThunk(
   'books/addBooks',
-  async (payload, thunkAPI) => {
+  async (payload, thunkAPI) => (
     fetch(`${apiUrl}/books`, {
       method: 'POST',
       body: JSON.stringify(payload),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
-    });
-
-    thunkAPI.dispatch(getBooks());
-  },
+    }).then(() => {
+      thunkAPI.dispatch(getBooks());
+    })
+  ),
 );
 
 export const deleteBooksThunk = createAsyncThunk(
