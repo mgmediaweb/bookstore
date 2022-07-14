@@ -1,18 +1,19 @@
 import { useDispatch } from 'react-redux';
-import { addBook } from '../../redux/books/books';
 import createBook from '../../redux/createBook';
 import Button from '../button/Button';
+import { addBooksThunk } from '../../redux/connectionApi';
+
 import './addbook.scss';
 
 const Addbook = () => {
   const dispatch = useDispatch();
 
-  const newBook = (e) => {
+  const newBook = async (e) => {
     e.preventDefault();
     const { target } = e;
     const title = target.title.value;
     const author = target.author.value;
-    dispatch(addBook(createBook(title, author)));
+    dispatch(addBooksThunk(createBook(title, author)));
     /* Cleaning the form */
     target.title.value = '';
     target.author.value = '';

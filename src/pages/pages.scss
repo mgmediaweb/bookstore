@@ -32,6 +32,6 @@ hr {
 .screen {
   box-sizing: border-box;
   color: white;
-  height: calc(100vh - $header-height);
+  min-height: calc(100vh - $header-height);
   width: 100vw;
 }

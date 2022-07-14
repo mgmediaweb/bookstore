@@ -1,19 +1,17 @@
 import React, { useEffect } from 'react';
-import { useSelector /* , useDispatch */ } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Addbook from '../components/addbook/Addbook';
 import Book from '../components/book/Book';
-// import { getBooks } from '../redux/books/books';
+import { getBooks } from '../redux/connectionApi';
+
 import './pages.scss';
 
 const BooksScreen = () => {
-  // const dispatch = useDispatch();
-  const { books, status } = useSelector((state) => state.books);
-  // const books = [];
+  const dispatch = useDispatch();
+  const { books } = useSelector((state) => state.books);
 
   useEffect(() => {
-    // console.log(dispatch(getBooks()));
-    console.log(books);
-    console.log(status);
+    dispatch(getBooks());
   }, []);
 
   return (
@@ -25,8 +23,8 @@ const BooksScreen = () => {
               author={book.author}
               category={book.category}
               chapter={book.chapter}
-              id={book.item_id}
-              key={book.item_id}
+              id={book.id}
+              key={book.id}
               title={book.title}
               percentage={book.percentage}
             />
