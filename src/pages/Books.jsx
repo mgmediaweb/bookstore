@@ -1,10 +1,18 @@
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Addbook from '../components/addbook/Addbook';
 import Book from '../components/book/Book';
+import { getBooks } from '../redux/connectionApi';
+
 import './pages.scss';
 
 const BooksScreen = () => {
-  const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
+  const { books } = useSelector((state) => state.books);
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
 
   return (
     <div className="screen">

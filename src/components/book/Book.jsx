@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import { deleteBook } from '../../redux/books/books';
+import { deleteBooksThunk } from '../../redux/connectionApi';
 import 'react-circular-progressbar/dist/styles.css';
 import Button from '../button/Button';
 import './book.scss';
@@ -12,6 +12,10 @@ const Book = (props) => {
   const {
     id, author, category, chapter, title, percentage,
   } = props;
+
+  const actionButton = () => {
+    dispatch(deleteBooksThunk(id));
+  };
 
   return (
     <div className="card">
@@ -26,8 +30,8 @@ const Book = (props) => {
             <div
               role="button"
               className="link"
-              onClick={() => dispatch(deleteBook(id))}
-              onKeyUp={() => dispatch(deleteBook(id))}
+              onClick={() => actionButton()}
+              onKeyUp={() => actionButton()}
               tabIndex={id}
             >
               Remove
@@ -61,12 +65,17 @@ const Book = (props) => {
   );
 };
 
+Book.defaultProps = {
+  chapter: 'Not Specificated',
+  percentage: 0,
+};
+
 Book.propTypes = {
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  chapter: PropTypes.string.isRequired,
+  chapter: PropTypes.string,
   id: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
+  percentage: PropTypes.number,
   title: PropTypes.string.isRequired,
 };
 
